@@ -32,13 +32,16 @@ This will keep the npm process alive so in another terminal tab run the command:
 
 There are three test accounts which can be used based on data returned from the Wonde API:
 
-> email: steven.dumbell@school.com
+> email: `steven.dumbell@school.com`
+> 
+> password: `password`
+
+> email: `ruth.hatchett@school.com`
+> 
 > password: password
 
-> email: ruth.hatchett@school.com
-> password: password
-
-> email: selina.andrews@school.com
-> password: password
+> email: `selina.andrews@school.com`
+> 
+> password: `password`
 
 I opted to require login so the users could see data which is only relevant to them and the system does not get overwhelmed with information which does not serve that specific teacher.
