@@ -10,6 +10,8 @@ Inertia JS
 
 
 ## Setup
+
+First, run `cp.env.example .env`
 To set up the system for use please make sure you have a database created and the appropriate details are added to your `.env` file.
 For Example: 
 ```
@@ -28,7 +30,9 @@ WONDE_SCHOOL_ID=A1930499544
 ```
 
 Once your `.env` is sorted you can run `composer install` and `npm install && npm run dev`
-This will keep the npm process alive so in another terminal tab run the command: `php artisan migrate:fresh --seed` to create initial user data.
+This will keep the npm process alive so in another terminal tab run the command: `php artisan key:generate` then `php artisan migrate:fresh --seed` to create initial user data.
+
+Then to start the app you can run `php artisan serve`
 
 There are three test accounts which can be used based on data returned from the Wonde API:
 
