@@ -8,15 +8,15 @@ use Saloon\Exceptions\SaloonException;
 use Saloon\Http\Faking\MockResponse;
 use Saloon\Laravel\Facades\Saloon;
 
-it('loads a class\' details from the wonde api', function(string $apiId, string $firstName) {
-
+it('loads a class\' details from the wonde api', function(string $apiId, string $name) {
     Saloon::fake([
-       MockResponse::fixture(sprintf('class.%s', $apiId)),
+        MockResponse::fixture(sprintf('class.%s', $apiId)),
     ]);
+
 
     expect(resolve(GetClass::class)->execute($apiId))
         ->id->toEqual($apiId)
-        ->name->toEqual($firstName);
+        ->name->toEqual($name);
 })->with('classes');
 
 it('throws an exception if the request failed for whatever reason', function(){

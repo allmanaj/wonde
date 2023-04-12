@@ -39,7 +39,7 @@ class GetClassRequest extends Request
     protected function defaultQuery(): array
     {
         return [
-            'include' => 'students,subject'
+            'include' => 'students,lessons.period'
         ];
     }
 }

@@ -9,6 +9,10 @@ function back() {
     window.history.back()
 }
 
+function lessons() {
+    return [ ...new Set(props.classData.lessons.data.map(lesson => `${lesson.period.data.day}`)) ].join(', ')
+}
+
 </script>
 
 <template>
@@ -29,7 +33,7 @@ function back() {
                         Back
                     </a>
                     <div class="p-6 text-gray-900">
-                        <h2 class="text-gray-900 text-xl mb-4">{{ classData.name }}</h2>
+                        <h2 class="text-gray-900 text-xl mb-4 capitalize">{{ classData.name }} - {{ lessons() }}</h2>
                         <StudentList :students="classData.students.data"/>
                     </div>
                 </div>
