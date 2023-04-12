@@ -3,7 +3,7 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head } from '@inertiajs/vue3';
 import ClassList from '@/Components/Dashboard/ClassList.vue';
 
-const props = defineProps({employee: Object, user: Object})
+const props = defineProps({employee: Object})
 
 </script>
 
