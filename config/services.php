@@ -30,5 +30,8 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
-
+    'wonde' => [
+        'token' => env('WONDE_API_TOKEN'),
+        'school_id' => env('WONDE_SCHOOL_ID')
+    ]
 ];
