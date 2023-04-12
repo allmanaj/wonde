@@ -17,11 +17,7 @@ it('loads an employee\'s details from the wonde api', function(string $apiId, st
         ->id->toEqual($apiId)
         ->forename->toEqual($firstName)
         ->surname->toEqual($lastName);
-})->with([
-    ['A500460806', 'Selina', 'Andrews'],
-    ['A921160679', 'Steven', 'Dumbell'],
-    ['A593143780', 'Ruth', 'Hatchett'],
-]);
+})->with('employees');
 
 it('throws an exception if the request failed for whatever reason', function(){
     Saloon::fake([

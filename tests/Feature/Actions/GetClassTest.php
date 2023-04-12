@@ -17,11 +17,7 @@ it('loads a class\' details from the wonde api', function(string $apiId, string 
     expect(resolve(GetClass::class)->execute($apiId))
         ->id->toEqual($apiId)
         ->name->toEqual($firstName);
-})->with([
-    ['A946948345', '10A/Ar1'],
-    ['A1047915664', '10A/Ci'],
-    ['A879263787', '10A/Dr1'],
-]);
+})->with('classes');
 
 it('throws an exception if the request failed for whatever reason', function(){
     Saloon::fake([
