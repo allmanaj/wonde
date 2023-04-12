@@ -11,7 +11,7 @@ Inertia JS
 
 ## Setup
 
-First, run `cp.env.example .env`
+First, run `cp .env.example .env`
 To set up the system for use please make sure you have a database created and the appropriate details are added to your `.env` file.
 For Example: 
 ```
